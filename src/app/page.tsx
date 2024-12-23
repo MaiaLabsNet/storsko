@@ -1,101 +1,87 @@
-import Image from "next/image";
+import NewsItemo from "@/components/A";
+import AboutMaiaLabs from "@/components/AboutMaiaLabs";
+import ContactForm from "@/components/ContactForm";
+import FunctionalView from "@/components/FunctionalView";
+import Hero from "@/components/F";
+import IconTextRow from "@/components/IconTextRow";
+import NewsItem from "@/components/NewItem";
+import NewsColumn from "@/components/NewsList";
+import NewsUpdates from "@/components/Newsupdates";
+import PlatformIcons from "@/components/PlatformIcons";
+import SocialMediaSection from "@/components/SocialMediaSection";
+import TrailerSection from "@/components/TrailerSection";
+
+const content = {
+  articleLink: {
+    href: "https://www.naughtydog.com/blog/intergalactic_the_heretic_prophet_announcement",
+    backgroundImage:
+      "https://s3.us-east-1.amazonaws.com/nd.images/uploads/Jordan_KeyArt_16x9-1.jpg",
+    blogType: "News",
+    title:
+      "Announcing Intergalactic: The Heretic Prophet, a New Franchise From Naughty Dog",
+  },
+  textSection: {
+    author: {
+      name: "Neil Druckmann",
+      profileLink: "/blog/authors/neil-druckmann/posts",
+    },
+    date: "December 12, 2024",
+    articleTitle:
+      "Announcing Intergalactic: The Heretic Prophet, a New Franchise From Naughty Dog",
+    summary:
+      "Explore a whole new world from the studio behind The Last of Us, Uncharted and more.",
+    readMoreLink:
+      "https://www.naughtydog.com/blog/intergalactic_the_heretic_prophet_announcement",
+  },
+  arrowLink: {
+    href: "https://www.naughtydog.com/blog/intergalactic_the_heretic_prophet_announcement",
+    iconSrc: "/assets/images/openings-arrow-up-red.svg",
+    iconAlt: "Read more",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <main>
+      <Hero />
+      <NewsUpdates />
+      <FunctionalView />
+      <TrailerSection />
+      <PlatformIcons />
+      
+      <div className="p-4 space-y-6">
+        <NewsItem
+          href="https://www.naughtydog.com/blog/celebrating_the_10th_anniversary_of_the_last_of_us"
+          imageUrl="/image/witcher.jpg"
+          title="Celebrating the 10th Anniversary of The Last of Us"
+          author="Naughty Dog"
+          date="June 14, 2023"
+          summary="Members of the development team for the original The Last of Us look back on lessons learned, favorite memories..."
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      <NewsColumn />
+      {/* <IconTextRow
+        icon="/icons/company.svg"
+        text="This is another row with a different icon."
+      />
+      <IconTextRow
+        icon="/icons/company.svg"
+        text="This is another row with a different icon."
+      />
+      // */}
+      {/* <DeveloperCarousel /> */}
+      {/* <section id="Goal">
+        <Skills />
+      </section> */}
+      {/* <section id="Timeline">
+        <Timeline />
+      </section> */}
+      {/* <section id="Projects">
+        <Projects />
+      </section> */}
+      {/* <SocialMediaSection /> */}
+      {/* <AboutMaiaLabs /> */}
+      {/* <ContactForm /> */}
+    </main>
   );
 }

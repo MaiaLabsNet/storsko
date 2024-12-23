@@ -1,5 +1,5 @@
-## Storsko.com
-news and updates for storsko
+## GameChisel.com
+news and updates for Game Chisel. A Stylized Game Asset Collection.
 
 ```bash
 npm run dev
@@ -11,3 +11,5 @@ pnpm dev
 bun dev
 ```
 
+@heroicons/react
+npm install @react-three/fiber @react-three/drei three
